@@ -1,0 +1,50 @@
+{
+    "name": "karma-server",
+    "version": "0.0.0",
+    "description": "Start a server based on Ynn.",
+    "main": "index.js",
+    "scripts": {
+        "test": "karma start"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ynnjs/karma-server.git"
+    },
+    "keywords": [
+        "ynn",
+        "ynnjs",
+        "karma",
+        "server",
+        "http",
+        "http-server",
+        "test"
+    ],
+    "author": {
+        "name": "LvChengbin",
+        "email": "lvchengbin59@gmail.com"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ynnjs/karma-server/issues"
+    },
+    "homepage": "https://github.com/ynnjs/karma-server#readme",
+    "dependencies": {
+        "@lvchengbin/is": "0.0.24",
+        "ynn": "0.0.8"
+    },
+    "devDependencies": {
+        "@lvchengbin/biu": "^0.1.8",
+        "eslint": "^5.6.0",
+        "jasmine": "^3.2.0",
+        "jasmine-core": "^3.2.1",
+        "karma": "^3.0.0",
+        "karma-chrome-launcher": "^2.2.0",
+        "karma-jasmine": "^1.1.2",
+        "karma-rollup-preprocessor": "^6.0.1",
+        "optimist": "^0.6.1",
+        "pre-commit": "^1.2.2",
+        "puppeteer": "^1.8.0",
+        "rollup": "^0.66.0",
+        "rollup-plugin-node-resolve": "^3.4.0"
+    }
+}

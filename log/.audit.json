@@ -1,0 +1,24 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 30
+    },
+    "auditLog": "/Users/NextSeason/workspace/projects/ynn/karma-server/log/.audit.json",
+    "files": [
+        {
+            "date": 1537101415747,
+            "name": "/Users/NextSeason/workspace/projects/ynn/karma-server/log/2018-09-16.log",
+            "hash": "47208996e61e4d8228b78ca0a6cb3623"
+        },
+        {
+            "date": 1537101415750,
+            "name": "/Users/NextSeason/workspace/projects/ynn/karma-server/log/warning-2018-09-16.log",
+            "hash": "c0ddcbe7ae5db3538edc62c9815e4fe1"
+        },
+        {
+            "date": 1537101415750,
+            "name": "/Users/NextSeason/workspace/projects/ynn/karma-server/log/error-2018-09-16.log",
+            "hash": "83aa40c68b188938e2303a83599dc550"
+        }
+    ]
+}
