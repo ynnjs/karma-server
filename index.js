@@ -35,6 +35,8 @@ const createServer = ( config, basePath, files, logger ) => {
             this.router.any( '*', /.*/, async ( ctx, next ) => {
                 try {
                     await next();
+                } catch( e ) {
+                    ctx.status = e.status;
                 } finally {
                     cors( ctx, config );
                 }
