@@ -1,6 +1,6 @@
 {
     "name": "karma-server",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "Start a server based on Ynn.",
     "main": "index.js",
     "scripts": {
@@ -30,7 +30,7 @@
     "homepage": "https://github.com/ynnjs/karma-server#readme",
     "dependencies": {
         "@lvchengbin/is": "0.0.24",
-        "ynn": "0.0.8"
+        "ynn": "0.0.9"
     },
     "devDependencies": {
         "@lvchengbin/biu": "^0.1.8",
