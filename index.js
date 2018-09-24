@@ -28,7 +28,7 @@ const createServer = ( config, basePath, files, logger ) => {
         },
         routers() {
             this.router.options( /.*/, async ctx => {
-                cors();
+                cors( ctx, config );
                 ctx.body = {};
             } );
 
