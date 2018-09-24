@@ -3,6 +3,14 @@ const path = require( 'path' );
 const Ynn = require( 'ynn' );
 const is = require( '@lvchengbin/is' );
 
+function cors( ctx, config ) {
+    const origin = ctx.request.get( 'origin' );
+    ctx.set( 'Access-Control-Allow-Origin', origin );
+    if( config[ 'Access-Control-Allow-Headers' ] ) {
+        ctx.set( 'Access-Control-Allow-Headers', config[ 'Access-Control-Allow-Headers' ] );
+    }
+}
+
 const createServer = ( config, basePath, files, logger ) => {
     const log = logger.create( 'server' );
     config || ( config = {} );
@@ -20,22 +28,16 @@ const createServer = ( config, basePath, files, logger ) => {
         },
         routers() {
             this.router.options( /.*/, async ctx => {
-                const origin = ctx.request.get( 'origin' );
-                ctx.vary( 'Origin' );
-                ctx.set( 'Access-Control-Allow-Origin', origin );
-                if( config[ 'Access-Control-Allow-Headers' ] ) {
-                    ctx.set( 'Access-Control-Allow-Headers', config[ 'Access-Control-Allow-Headers' ] );
-                }
+                cors();
                 ctx.body = {};
             } );
 
             this.router.any( '*', /.*/, async ( ctx, next ) => {
-                const origin = ctx.request.get( 'origin' );
-                ctx.set( 'Access-Control-Allow-Origin', origin );
-                if( config[ 'Access-Control-Allow-Headers' ] ) {
-                    ctx.set( 'Access-Control-Allow-Headers', config[ 'Access-Control-Allow-Headers' ] );
+                try {
+                    await next();
+                } finally {
+                    cors( ctx, config );
                 }
-                return next();
             } );
         }
     } );

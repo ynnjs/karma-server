@@ -1,6 +1,6 @@
 {
     "name": "karma-server",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Start a server based on Ynn.",
     "main": "index.js",
     "scripts": {
