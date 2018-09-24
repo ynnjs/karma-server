@@ -21,9 +21,10 @@ const createServer = ( config, basePath, files, logger ) => {
         routers() {
             this.router.options( /.*/, async ctx => {
                 const origin = ctx.request.get( 'origin' );
+                ctx.vary( 'Origin' );
                 ctx.set( 'Access-Control-Allow-Origin', origin );
                 if( config[ 'Access-Control-Allow-Headers' ] ) {
-                    ctx.set( 'Access-Control-Allow-Headers', config[ 'Access-Controller-Allow-Headers' ] );
+                    ctx.set( 'Access-Control-Allow-Headers', config[ 'Access-Control-Allow-Headers' ] );
                 }
                 ctx.body = {};
             } );
