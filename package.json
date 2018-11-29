@@ -30,7 +30,7 @@
     "homepage": "https://github.com/ynnjs/karma-server#readme",
     "dependencies": {
         "@lvchengbin/is": "0.0.24",
-        "ynn": "0.0.9"
+        "ynn": "0.0.14"
     },
     "devDependencies": {
         "@lvchengbin/biu": "^0.1.8",
@@ -39,12 +39,12 @@
         "jasmine-core": "^3.2.1",
         "karma": "^3.0.0",
         "karma-chrome-launcher": "^2.2.0",
-        "karma-jasmine": "^1.1.2",
+        "karma-jasmine": "^2.0.1",
         "karma-rollup-preprocessor": "^6.0.1",
         "optimist": "^0.6.1",
         "pre-commit": "^1.2.2",
         "puppeteer": "^1.8.0",
-        "rollup": "^0.66.0",
+        "rollup": "^0.67.3",
         "rollup-plugin-node-resolve": "^3.4.0"
     }
 }
